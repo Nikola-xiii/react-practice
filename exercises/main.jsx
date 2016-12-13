@@ -7,13 +7,20 @@ import GroceryListPart1 from './05-Challenge-GroceryList-part-1.jsx';
 import GroceryListPart2 from './05-Challenge-GroceryList-part-2.jsx';
 import GroceryListPart3 from './05-Challenge-GroceryList-part-3.jsx';
 import GroceryListPart4 from './05-Challenge-GroceryList-part-4.jsx';
+import CreditCardInput from './CreditCardInput';
 import renderName 	  	from './06-RenderComponent.jsx';
 
+let types ={
+  'Visa': /^4/,
+  'MasterCard': /^5[1-5]/,
+  'American Express': /^3[47]/
+};
+
 React.render(<HelloWorld/>,    	  document.getElementById("tab-content1"));
-React.render(<PartiesList/>,   	  document.getElementById("tab-content2"));
-React.render(<WhatsYourName/>, 	  document.getElementById("tab-content3"));
-React.render(<GroceryListPart1/>, document.getElementById("tab-content4"));
-React.render(<GroceryListPart2/>, document.getElementById("tab-content5"));
-React.render(<GroceryListPart3/>, document.getElementById("tab-content6"));
-React.render(<GroceryListPart4/>, document.getElementById("tab-content7"));
+React.render(<CreditCardInput type={types}/>,   	  document.getElementById("tab-content2"));
+// React.render(<WhatsYourName/>, 	  document.getElementById("tab-content3"));
+// React.render(<GroceryListPart1/>, document.getElementById("tab-content4"));
+// React.render(<GroceryListPart2/>, document.getElementById("tab-content5"));
+// React.render(<GroceryListPart3/>, document.getElementById("tab-content6"));
+// React.render(<GroceryListPart4/>, document.getElementById("tab-content7"));
 renderName(document.getElementById("tab-content8"));
